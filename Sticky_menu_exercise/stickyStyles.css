@@ -1,0 +1,54 @@
+body {
+    background-color: lightseagreen;
+    margin: 0px; 
+    font-size: 20px;
+}
+
+.container {
+    width: 960px;
+}
+
+.header{
+    background-color: aliceblue;
+    padding: 30px; 
+    text-align: center;
+}
+
+#stickymenu{
+    overflow: hidden; 
+    background-color: brown;
+}
+
+#stickymenu a{
+float: left; 
+display: block; 
+color: wheat; 
+text-align: center; 
+padding: 14px 16px; 
+text-decoration: none; 
+font-size: 16px; 
+}
+
+#stickymenu a:hover{
+    background-color: blue; 
+    color: black; 
+}
+
+#stickymenu a.active{
+    background-color: yellow; 
+    color: white; 
+}
+
+.content{
+    padding: 16px; 
+}
+
+.sticky {
+    position: fixed; 
+    top: 0; 
+    width: 100%;
+}
+
+.sticky + .content {
+    padding-top: 30px; 
+}

@@ -1,0 +1,91 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald|Oxygen);
+
+/*-- main container --*/
+.grid-container{
+		width: 100%;
+		max-width: 1200px;
+		line-height: 1.5em;
+    	}
+.grid-container *{
+	box-sizing: border-box;
+}
+/*-- our clearfix hack --*/
+.row:before, .row:after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/*-- columns --*/
+[class*='col-']{
+	float: left;
+	min-height: 1px;
+	width: 16.66%;
+	/*-- our gutter--*/
+	padding: 12px;
+	background-color: #ffdcdc;
+}
+
+.col-1{	width: 16.66%;}
+
+.col-2{	width: 33.33%;}
+
+.col-3{	width: 50%;}
+
+.col-4{	width:66.664%;}
+
+.col-5{	width: 83.33%;}
+
+.col-6{	width: 100%;}
+
+.outline, .outline *{
+	outline: 1px solid #f6a1a1;
+}
+
+[class*='col-'] > p{
+	background-color: #ffc2c2;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+	color: white;
+}
+/*-- typography --*/
+body{font-family: 'Oxygen', Arial, sans-serif;}
+
+h1, h2, h3, h4{font-family: 'Oswald', sans-serif;}
+
+h1{
+	font-size: 1.8em;
+	line-height: 2em;
+	text-align: center;
+	text-shadow: white;
+}
+
+p{
+	font-size: 0.8em;
+}
+
+
+@media all and (max-width: 800px){
+	.col-1{	width: 16.66%;}
+	.col-2{	width: 33.33%;}
+	.col-3{	width: 50%;}
+	.col-4{	width: 66.664%;}
+	.col-5{	width: 83.33%;}
+	.col-6{	width: 100%;}
+	.row .col-2:last-of-type{
+		width: 100%;
+	}
+	.row .col-5 ~ .col-1{
+		width: 100%;
+	}
+}
+
+@media all and (max-width: 650px){
+	.col-1{	width: 50%;}
+	.col-2{	width: 100%;}
+	.col-3{	width: 100%;}
+	.col-4{	width: 100%;}
+	.col-5{	width: 100%;}
+	.col-6{	width: 100%;}
+}

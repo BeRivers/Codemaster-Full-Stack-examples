@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+   <head>
+       <title>JS Object Constructor</title>
+
+       <style>
+
+           button{
+               display: block; 
+               width: 200px; 
+background-color: aquamarine; 
+padding: 50px; 
+justify-content: space-between; 
+font-size: 20px; 
+transition: width 2s;
+           }
+
+           button:hover {
+  width: 300px;
+}
+
+       </style>
+
+       <script>
+
+           function onLoaded(){
+
+            function Dogs (breed, name, age, exercise){
+                this.breed = breed;
+                this.name = name;
+                this.age = age;
+                this.exercise = exercise;
+            }
+
+var familyDog = new Dogs('cavoodle', 'Noodle', 2, 'running at the park');
+var proDog = new Dogs('staffy', 'Butler', 5, 'sipping coffee at the cafe');
+var singleDog = new Dogs('beagle', 'Buddy', 3, 'swimming at the beach');
+var travelDog = new Dogs('chihuahua', 'Bon Voyage', 6, 'walking in airports');
+
+            // two new instances of people 
+
+            // var john = new Person('John', 'Doe');
+            // var jane = new Person('Jane', 'Smith');
+
+var btn1 = document.querySelector('#btn1'); 
+btn1.addEventListener('click', function(e){
+        btn1.innerHTML = familyDog.name + ' the ' + familyDog.breed + ' is ' + familyDog.age + ' and exercises by ' + familyDog.exercise;
+    });
+    btn1.addEventListener('dblclick', function(e){
+        btn1.innerHTML = (familyDog.name + ' says yay!');
+})
+
+proDog
+var btn2 = document.querySelector('#btn2'); 
+btn2.addEventListener('click', function(e){
+btn2.innerHTML = proDog.name + ' the ' + proDog.breed + ' is ' + proDog.age + ' and exercises by ' + proDog.exercise;
+});
+    btn2.addEventListener('dblclick', function(e){
+        btn2.innerHTML = (proDog.name + ' says kind regards');
+})
+
+var btn3 = document.querySelector('#btn3'); 
+btn3.addEventListener('click', function(e){
+btn3.innerHTML = singleDog.name + ' the ' + singleDog.breed + ' is ' + singleDog.age + ' and exercises by ' + singleDog.exercise;
+});
+    btn3.addEventListener('dblclick', function(e){
+        btn3.innerHTML = (singleDog.name + ' says thx brb');
+})
+
+var btn4 = document.querySelector('#btn4'); 
+btn4.addEventListener('click', function(e){
+btn4.innerHTML = travelDog.name + ' the ' + travelDog.breed + ' is ' + travelDog.age + ' and exercises by ' + travelDog.exercise;
+});
+    btn4.addEventListener('dblclick', function(e){
+        btn4.innerHTML = (travelDog.name + ' says gracias amigo');
+})
+        
+
+            // btn1click
+            // alert person1 name
+
+//             document.querySelector('#btn1').addEventListener('click', function(e){
+// alert(john.firstName + ' ' + john.lastNamme);
+
+//             });
+
+            // bt2click
+            // aert person2 name
+//             document.querySelector('#btn2').addEventListener('click', function(e){
+//                 alert(jane.firstName + ' ' + jane.lastNamme);
+// });
+
+}
+       
+       
+       </script>
+       </head>
+  
+  
+       <body onload="onLoaded()">
+      
+        <!-- two buttons -->
+
+        <button id='btn1'>Meet your family dog</button>
+        <button id='btn2'>Meet your professional dog</button>
+        <button id='btn3'>Meet your singles dog</button>
+        <button id='btn4'>Meet your travel dog</button>
+
+   </body>
+</html>

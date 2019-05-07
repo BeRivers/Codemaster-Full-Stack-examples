@@ -1,0 +1,62 @@
+h1 { color: white }
+
+.text-highlight{
+    background-color: green; 
+}
+
+.nav-font{
+    font-size: 50px; 
+}
+
+nav ul { margin: 0; padding: 0; display: flex; justify-content: space-around }
+nav ul li { list-style-type: none; flex-grow: 1 }
+nav ul li a { color: white; text-align: center; display: block; height: 60px; line-height: 60px }
+
+.bg-color--white { background-color: white }
+.bg-color--whitesmoke { background-color: whitesmoke }
+.bg-color--wheat { background-color: wheat }
+.bg-color--black { background-color: black }
+.bg-color--blue { background-color: blue }
+.bg-color--gray { background-color: gray }
+
+.banner__image { padding: 20px 0 }
+.banner__image img { width: 100% }
+
+.footer { height: 120px; background-color: blue; border-radius: 20px; color: white; border: 2px solid lightgray; padding: 20px }
+
+footer nav ul li a { height: 30px; line-height: 30px }
+
+@keyframes example {
+    0% {
+        transform: rotate(0deg);
+        left: 0px;
+    }
+
+    25% {
+        transform: rotate(20deg);
+        left: 0px;
+    }
+
+    50% {
+        transform: rotate(0deg);
+        left: 500px;
+    }
+
+    70% {
+        transform: rotate(0deg);
+        left: 500px;
+        background: #1ec7e6;
+    }
+
+    100% {
+        transform: rotate(-360deg);
+        left: 0px;
+    }
+}
+
+.banner_image.flip-effect {
+    width: 100%; 
+  animation-name: example;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}

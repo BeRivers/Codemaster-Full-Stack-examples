@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Modals Exercise</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="modal-container" id="modal1Target">
+    <div class="modal-content vertical-center-position">
+      <a href="#" class="modal-close-btn">
+        Close X
+      </a>
+      <h2>
+        Modal content
+      </h2>
+      <p>
+        I am the modal content!
+      </p>
+    </div>
+  </div>
+
+
+  <div class="modal-container" id="modal2Target">
+    <div class="modal-content vertical-center-position">
+      <a href="#" class="modal-close-btn">
+        Close X
+      </a>
+      <h2>
+        Modal content2
+      </h2>
+      <p>
+        I am the second modal
+      </p>
+    </div>
+  </div>
+
+
+  <div class="modal-container" id="modal3Target">
+    <div class="modal-content vertical-center-position">
+      <a href="#" class="modal-close-btn">
+        Close X
+      </a>
+      <h2>
+        Modal content3
+      </h2>
+      <p>
+        I am the third modal
+      </p>
+    </div>
+  </div>
+
+  <main>
+
+    <header>
+      <h1>Modal Window Exercise</h1>
+    </header>
+
+    <section>
+
+      <p>
+        This exercise requires you to complete the CSS and JavaScript logic necessary to implement a 'modal window'
+        component (otherwise known as a popup window). <a href="https://en.wikipedia.org/wiki/Modal_window"
+          target="_blank">Wikipedia description of a modal window</a>.
+      </p>
+
+      <p>
+        The modal window will be opened via either a link ('a' tag) or button ('button' tag). In order for your logic to
+        identify one of these modal trigger elements, a CSS class must be applied to it 'modal-link'. In addition, to
+        associate a trigger with a particular modal container (explained soon), the same modal trigger element must have
+        a 'data-modal-target' attribute defined on it. The value of this attribute will be the id of the modal
+        container. An example modal trigger is provided below.
+      </p>
+
+      <p>
+        <a href="#" class="modal-link" data-modal-target="modal1Target">
+          Click me, I'm a modal trigger
+        </a>
+      </p>
+
+      <p>
+        <a href="#" class="modal-link" data-modal-target="modal2Target">
+         Modal 2
+        </a>
+      </p>
+
+      <p>
+        <a href="#" class="modal-link" data-modal-target="modal2Target">
+          Modal 3
+        </a>
+      </p>
+
+      <p>
+        A modal container is what becomes visible when the modal trigger is clicked. It must have the CSS class
+        'modal-container'. If you look in the styles.css file, you'll notice that the 'modal-container' class is
+        invisible by default (display: none;), in order to make it visible when the modal trigger element is clicked you
+        will need to add the 'active' CSS class to it. An example has been provided in the HTML markup with the ID
+        'modal1Target'
+      </p>
+
+      <h3>INTERMEDIATE level</h3>
+
+      <p>
+        So with this in mind, you must do the following:
+      </p>
+
+      <ol>
+        <li>
+          Find all elements in the HTML with a CSS class of 'modal-link'.
+        </li>
+        <li>
+          Apply to these elements an 'onclick' event.
+        </li>
+        <li>
+          Complete the necessary logic in the click event:
+          <ol>
+            <li>
+              Get a reference to the clicked element from the 'click' event object which is accessible in the event as a
+              parameter (currentTarget).
+            </li>
+            <li>
+              Get the ID provided in the value of the elements 'data-modal-target' attribute (getAttribute).
+            </li>
+            <li>
+              Find the target modal container on page using the ID which we just retreived.
+            </li>
+            <li>
+              Add the 'active' CSS class to this modal container element.
+            </li>
+          </ol>
+        </li>
+        <li>
+          Now, you will have to enable the functionality to then HIDE this modal container. This logic is almost the
+          same as the logic to open the modal but instead applied to the elements with the class name 'modal-close-btn'.
+          The one difference is finding the modal container associated with the close button. In place of the 'data'
+          attribute used in the open link logic, use instead this method: elem.closest('.modal-container'). This method
+          finds the closest parent element with that CSS class name, and since our close button is inside the container,
+          this works!<br />
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/API/Element/closest">https://developer.mozilla.org/en-US/docs/Web/API/Element/closest</a>
+        </li>
+        <li>
+          You must also complete the styling so that the visible modal looks like the image below.
+        </li>
+      </ol>
+
+      <img src="images/result.PNG" alt="Result" width="400px" />
+
+    </section>
+
+  </main>
+
+  <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4="
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="scripts.js"></script>
+</body>
+
+</html>

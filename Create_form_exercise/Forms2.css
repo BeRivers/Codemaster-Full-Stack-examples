@@ -1,0 +1,37 @@
+body{
+    background-color: pink; 
+    margin: 50px; 
+    font-size: 16px; 
+}
+
+.container{
+    width: 800px;
+    position: absolute; 
+    height: 100%; 
+}
+
+/* article {
+    overflow: scroll; 
+} */
+
+label {
+    display: block; 
+    padding: 10px; 
+}
+
+input{
+    padding: 10px; 
+}
+
+button{
+    box-sizing: 1px border-box;
+    size: 20px; 
+}
+
+.clearfix {
+    clear: both; 
+}
+
+.invalid{
+    color: red;
+}

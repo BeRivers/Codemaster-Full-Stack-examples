@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+        <meta name = "viewport" content = "device-width, initial-scale=1">
+   <header>
+     
+        <link rel = "stylesheet" href="slidesStyle.css" type="text/css">
+     </header>
+   <body>
+       <h2 style = "text-align: center">Slide Show Gallery</h2>
+       <div class = "container">
+           <div class = "mySlides">
+               <div class = "numbertext">1/6</div>
+               <img src = "C:\Users\Beth\Desktop\Coding\Codemasters\Projects\ARA\Images\creative-rose-gold-paint-for-walls-gold-painted-wall-stencil-walls-rose-gold-paint-gold-sponge-painted-walls-o7321968.jpg" style = "width:100%">
+           </div>
+           <div class = "mySlides">
+               <div class = "numbertext">2/6</div>
+               <img src = "C:\Users\Beth\Desktop\Coding\Codemasters\Projects\ARA\Images\fruit-juice-hair-1520536836.jpg" style = "width:100%">
+           </div>
+           <div class = "mySlides">
+               <div class = "numbertext">3/6</div>
+               <img src = "C:\Users\Beth\Desktop\Coding\Codemasters\Projects\ARA\Images\images (2).jpg" style = "width:100%">
+           </div>
+           <div class = "mySlides">
+               <div class = "numbertext">4/6</div>
+               <img src = "C:\Users\Beth\Desktop\Coding\Codemasters\Projects\ARA\Images\rose-gold-wall-art-canvas-red-and-lips-painting-a-black-chandelier-white-prints-medium-kids-room-licious-whit.jpg" style = "width:100%">
+           </div>
+           <div class = "mySlides">
+               <div class = "numbertext">5/6</div>
+               <img src = "C:\Users\Beth\Desktop\Coding\Codemasters\Projects\ARA\Images\Vallejo Liquid Gold colors.jpg" style = "width:100%">
+           </div>
+           <div class = "mySlides">
+               <div class = "numbertext">6/6</div>
+               <img src = "C:\Users\Beth\Desktop\Coding\Codemasters\Projects\ARA\Images\images.jpg" style = "width:100%">
+           </div>
+           <a class="prev" onclick="pushSlides(-1)">PREV</a>
+           <a class="next" onclick="pushSlides(1)">NEXT</a>
+           <div class="captioncontainer">
+               <p id="caption"></p>
+           </div>
+           <div class="row">
+               <div class="column">
+                   <img class="demo cursor" src="C:\Users\Beth\Desktop\Coding\Codemasters\Projects\ARA\Images\creative-rose-gold-paint-for-walls-gold-painted-wall-stencil-walls-rose-gold-paint-gold-sponge-painted-walls-o7321968.jpg" style="width: 100%" onclick="currentSlide(1)" alt="watermelon">
+               </div>
+
+               <div class="column">
+                    <img class="demo cursor" src="C:\Users\Beth\Desktop\Coding\Codemasters\Projects\ARA\Images\fruit-juice-hair-1520536836.jpg" style="width: 100%" onclick="currentSlide(2)" alt="pinnapple">
+                </div>
+
+                <div class="column">
+                        <img class="demo cursor" src="C:\Users\Beth\Desktop\Coding\Codemasters\Projects\ARA\Images\images (2).jpg" style="width: 100%" onclick="currentSlide(3)" alt="grapes">
+                    </div>
+
+                    <div class="column">
+                            <img class="demo cursor" src="C:\Users\Beth\Desktop\Coding\Codemasters\Projects\ARA\Images\rose-gold-wall-art-canvas-red-and-lips-painting-a-black-chandelier-white-prints-medium-kids-room-licious-whit.jpg" style="width: 100%" onclick="currentSlide(4)" alt="mango">
+                        </div>
+
+                        <div class="column">
+                                <img class="demo cursor" src="C:\Users\Beth\Desktop\Coding\Codemasters\Projects\ARA\Images\Vallejo Liquid Gold colors.jpg" style="width: 100%" onclick="currentSlide(5)" alt="strawberries">
+                            </div>
+
+                            <div class="column">
+                                    <img class="demo cursor" src="C:\Users\Beth\Desktop\Coding\Codemasters\Projects\ARA\Images\images.jpg" style="width: 100%" onclick="currentSlide(6)" alt="coconut">
+                                </div>
+           </div>
+       </div>
+
+       <script>
+            var slideIndex=1;
+            showSlides(slideIndex);
+            
+            function pushSlides(n){
+                showSlides(slideIndex +=n)
+            }
+            function currentSlide(n){
+                showSlides(slideIndex=n);  
+            }
+            function showSlides(n){
+                var i;
+                var slides = document.getElementsByClassName('mySlides');
+                var dots = document.getElementsByClassName('demo');
+                var caption = document.getElementById('caption');
+        
+                if (n>slides.length){slideIndex=1};
+                if (n<1){slideIndex=slides.length};
+                for (i=0; i<slides.length; i++){
+                    slides[i].style.display='none';
+                }
+                for (i=0; i<dots.length; i++){
+                    dots[i].className=dots[i].className.replace('active', '');
+                }
+                slides[slideIndex-1].style.display="block";
+                dots[slideIndex-1].className+="active";
+                caption.innerHTML=dots[slideIndex-1].alt;
+        
+            }
+        
+            </script>
+   </body>
+</html>

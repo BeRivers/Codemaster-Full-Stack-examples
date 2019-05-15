@@ -4,4 +4,4 @@
 
 HTML, CSS and JavaScript working code based on class exercises
 
-Also, see Codemaster-Projects
+Also, see other repositories for a variety of projects we completed.
